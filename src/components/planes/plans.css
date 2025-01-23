@@ -4,31 +4,37 @@
     flex-direction: column;
     gap: 4rem;
     position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.plansburn1{
+.plansburn1, .plansburn2 {
+    position: absolute;
     width: 32rem;
     height: 23rem;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.plansburn1 {
     top: 6rem;
     left: 0;
 }
 
-.plansburn2{
-    width: 32rem;
-    height: 23rem;
+.plansburn2 {
     top: 10rem;
     right: 0;
 }
 
-.programs-headers{
+.programs-headers {
     display: flex;
     gap: 5rem;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 2rem;
     justify-content: center;
     color: white;
     text-transform: uppercase;
-    font-style: italic;
+    letter-spacing: 2px;
 }
 
 .plans {
@@ -41,36 +47,44 @@
 .plan {
     display: flex;
     flex-direction: column;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.2);
     color: white;
     gap: 2rem;
-    padding: 1.5rem;
-    width: 15rem;
+    padding: 2.5rem;
+    width: 18rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.plan:nth-child(2){
-    background: linear-gradient(to right, #B20000, #8B0000, #660000, #3D0000);
-    transform: scale(1,1);
+.plan:nth-child(2) {
+    background: linear-gradient(to right, #B20000, #8B0000, #660000);
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.plan>svg{
+.plan > svg {
     fill: #990000;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-self: flex-start;
 }
 
-.plan>:nth-child(2){
-    font-size: 1rem;
-    font-weight: bold;
+.plan > :nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.plan>:nth-child(3){
+.plan > :nth-child(3) {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 800;
+    color: #fff;
 }
 
-.plan>:nth-child(5){
-    font-size: 0.8rem;
+.plan > :nth-child(5) {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .features {
@@ -85,16 +99,13 @@
     gap: 1rem;
 }
 
-.feature>img{
-    width: 1rem;
+.feature > img {
+    width: 1.2rem;
 }
 
-.plans>:nth-child(2)>svg {
-    fill: white;
-}
-
-.plans>:nth-child(2)>button {
-    color: #990000;
+.plan:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 1200px) {
@@ -108,21 +119,6 @@
     }
 }
 
-@media screen and (max-width: 940px) {
-    .programs-headers {
-        gap: 2rem;
-        font-size: 1.5rem;
-    }
-    
-    .plansburn1, .plansburn2 {
-        width: 25rem;
-        height: 18rem;
-    }
-
-    
-    
-}
-
 @media screen and (max-width: 768px) {
     .planes {
         padding: 0 1rem;
@@ -133,6 +129,7 @@
         gap: 1rem;
         align-items: center;
         text-align: center;
+        font-size: 1.5rem;
     }
 
     .plans {
@@ -142,23 +139,16 @@
 
     .plan {
         width: 70%;
-        max-width: 20rem;
+        max-width: 22rem;
     }
 
     .plan:nth-child(2) {
         transform: none;
     }
 
-    .plansburn1 {
+    .plansburn1, .plansburn2 {
         width: 20rem;
         height: 15rem;
-        left: -3rem;
-    }
-
-    .plansburn2 {
-        width: 20rem;
-        height: 15rem;
-        right: -3rem;
     }
 }
 
@@ -171,7 +161,6 @@
         font-size: 1.2rem;
     }
     
-   
     .plansburn1, .plansburn2 {
         width: 15rem;
         height: 10rem;

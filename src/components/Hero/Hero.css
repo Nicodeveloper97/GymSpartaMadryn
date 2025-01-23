@@ -1,22 +1,23 @@
-.hero{
+.hero {
     display: flex;
     justify-content: space-between;
 }   
 
-.left-h{
-    padding: 2rem;
-    padding-top: 1.5rem;
+.left-h {
+    padding: 2rem 2rem 1.5rem;
     flex: 3;
     display: flex;
     gap: 2rem;
     flex-direction: column;
 }
-.right-h{
+
+.right-h {
     flex: 1;
     position: relative;
     background-color: #990000;
 }
-.anuncio{
+
+.anuncio {
     margin-top: 4rem;
     background-color: #292626;
     border-radius: 4rem;
@@ -30,11 +31,11 @@
     justify-content: flex-start;
 }
 
-.anuncio>span{
+.anuncio > span {
     z-index: 2;
 }
 
-.anuncio>div{
+.anuncio > div {
     position: absolute;
     background-color: #990000;
     width: 5.4rem;
@@ -43,7 +44,7 @@
     border-radius: 3rem;
 }
 
-.hero-text{
+.hero-text {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -51,10 +52,9 @@
     font-size: 4.5rem;
     font-weight: bold;
     color: white;
-    text-overflow: inherit;
 }
 
-.hero-text>div:nth-of-type(3){
+.hero-text > div:nth-of-type(3) {
     font-size: 1rem;
     font-weight: 200;
     text-transform: none;
@@ -66,16 +66,18 @@
     display: flex;
     gap: 2rem;
 }
-.figuras>div{
+
+.figuras > div {
     display: flex;
     flex-direction: column;
 }
-.figuras>div>span:nth-of-type(1) {
+
+.figuras > div > span:nth-of-type(1) {
     color: white;
     font-size: 2rem;
 }
 
-.figuras>div>span:nth-of-type(2) {
+.figuras > div > span:nth-of-type(2) {
     color: gray;
     text-transform: uppercase;
 }
@@ -83,141 +85,106 @@
 .hero-botones {
     display: flex;
     gap: 2rem;
-    font-weight: normal;
+    margin-top: 1rem;
 }
 
-.hero-botones>:nth-child(1){
+.hero-botones > .btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.hero-botones > :nth-child(1) {
     color: white;
     background-color: #990000;
-    width: 8rem;
+    border-color: #990000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hero-botones>:nth-child(2){
-    color: white;
+.hero-botones > :nth-child(1):hover {
+    background-color: #ba0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero-botones > :nth-child(2) {
+    color: #990000;
     background-color: transparent;
-    width: 8rem;
-    border: 2px solid #990000;
+    border-color: #990000;
 }
 
-.right-h>.btn{
+.hero-botones > :nth-child(2):hover {
+    background-color: rgba(153, 0, 0, 0.1);
+    color: #ba0000;
+}
+
+.right-h > .btn {
     position: absolute;
     right: 3rem;
     top: 3rem;
     color: black;
 }
 
-.corazon{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: grey;
-    width: fit-content;
-    padding: 1rem;
-    align-items: flex-start;
-    border-radius: 5px;
-    position: absolute;
-    right: 4rem;
-    top: 7rem;
-}
-
-.corazon>img{
-    width: 2rem;
-}
-
-.corazon>span:nth-child(2){
-    color: darkgray;
-}
-
-.corazon>span:nth-child(3){
-    color: white;
-    font-size: 1.5rem;
-}
-
 .hero-imagen {
     position: absolute;
-    top: 6rem;
+    top: 7.5rem;
     right: 8rem;
     width: 23rem;
 }
 
-.calorias {
-    display: flex;
-    gap: 2rem;
-    background-color: var(--caloryCard);
-    border-radius: 5px;
-    padding: 1rem;
-    width: fit-content;
-    position: absolute;
-    top: 32rem;
-    right: 32rem;
-}
-
-.calorias>img {
-    width: 3rem;
-}
-
-.calorias>div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.calorias>div> :nth-child(1){
-    color: gray;
-}
-
-.calorias>div> :nth-child(2){
-    color: white;
-}
-
-.heroblur{
+.heroblur {
     width: 22rem;
     height: 30rem;
     left: 0;
-  }
+}
 
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .hero {
         flex-direction: column;
     }
     
-    .heroblur{
+    .heroblur {
         width: 14rem;
     }
 
-    .anuncio{
+    .anuncio {
         margin-top: 0;
         font-size: small;
         align-self: center;
         transform: scale(0.8);
     }
 
-    .hero-text{
+    .hero-text {
         font-size: xx-large;
         align-items: center;
         justify-content: center;
     }
-    .hero-text > div:nth-of-type(3){
+
+    .hero-text > div:nth-of-type(3) {
         font-size: small;
         font-weight: 200;
         letter-spacing: 1px;
         text-align: center;
     }
 
-    .hero-botones{
+    .hero-botones {
         justify-content: center;
     }
 
-    .figuras > div > span:nth-of-type(1){
+    .figuras > div > span:nth-of-type(1) {
         font-size: large;
     }
 
-    .figuras > div > span:nth-of-type(2){
+    .figuras > div > span:nth-of-type(2) {
         font-size: small;
     }
 
-    .right-h{
+    .right-h {
         display: none;
         position: relative;
         background: none;

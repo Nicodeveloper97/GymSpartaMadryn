@@ -3,85 +3,101 @@
     flex-direction: column;
     gap: 2rem;
     padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.Programs>hr{
-    position: relative;
+.Programs > hr {
     width: 10.5rem;
-    border: 2px solid var(red);
-    border-radius: 20%;
-   
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, #990000, transparent);
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
-
-.programs-header{
+.programs-header {
     display: flex;
     gap: 5rem;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.5rem;
     justify-content: center;
     color: white;
     text-transform: uppercase;
-    font-style: italic;
+    letter-spacing: 1.5px;
 }
 
-
-
-.programas-categorias{
+.programas-categorias {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
 .categoria {
     display: flex;
     flex-direction: column;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.2);
     padding: 2rem;
-    gap: 1rem;
+    gap: 1.5rem;
     color: white;
-    justify-content: space-between;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    min-width: 250px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.categoria>:nth-child(1){
-    width: 2rem;
-    height: 2rem;fill: white;
+.categoria > :nth-child(1) {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: white;
+    align-self: flex-start;
 }
 
-.categoria>:nth-child(2){
-    font-size: 1rem;
-    font-weight: bold;
+.categoria > :nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
-.categoria>:nth-child(3){
+.categoria > :nth-child(3) {
     font-size: 0.9rem;
-    line-height: 25px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .inicia {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    margin-top: auto;
 }
 
-.inicia>img {
-    width: 1rem;
+.inicia > img {
+    width: 1.2rem;
 }
 
 .categoria:hover {
-    background: linear-gradient(to right, #B20000, #8B0000, #660000, #3D0000);
-    cursor: pointer;
+    transform: translateY(-10px);
+    background: linear-gradient(to right, #B20000, #8B0000, #660000);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 768px){
-    .programs-header{
+@media screen and (max-width: 768px) {
+    .programs-header {
         flex-direction: column;
         gap: 1rem;
-        font-size: large;
+        font-size: 1.2rem;
         align-items: center;
-        justify-content: center;
+        text-align: center;
     }
 
-    .programas-categorias{
+    .programas-categorias {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .categoria {
+        width: 90%;
+        max-width: 350px;
     }
 }

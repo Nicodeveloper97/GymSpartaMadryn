@@ -32,7 +32,7 @@ const Plans = () => {
                         </div>
 
                         <div>
-                <span> Para saber mas --></span>
+                <span> Para saber mas </span>
             </div>
             <button className="btn"> Unete! </button>
                     </div> 

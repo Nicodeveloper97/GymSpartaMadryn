@@ -2,27 +2,26 @@ import React from "react"
 import "./Hero.css"
 import Header from "../../components/Header/Header"
 import Pibe from "../../assets/pibe.png"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import NumberCounter from "number-counter"
 
-const Hero = () => {
+const Hero = React.memo(() => {
+    const transition = React.useMemo(() => 
+        ({ type: 'spring', duration: 3 }), 
+    [])
 
-    const transition = {type: 'spring', duration : 3}
     return (
         <div className="hero">
-
             <div className="blur heroblur"></div>
             <div className="left-h">
-
                 <Header/>
 
                 <div className="anuncio">
                     <motion.div
-                    initial={{left: '228px'}}
-                    whileInView={{left: '8px'}}
-                    transition={{...transition, type: 'tween'}}>
-
-                    </motion.div>
+                        initial={{ left: '200px' }}
+                        whileInView={{ left: '8px' }}
+                        transition={{ ...transition, type: 'tween' }}
+                    />
                     <span>Haz que cada repetición cuente</span>
                 </div>
 
@@ -36,17 +35,16 @@ const Hero = () => {
                     </div>
                     <div>
                         <span>
-                        Aqui te ayudaremos a encontrar tu mejor forma
+                            Aqui te ayudaremos a encontrar tu mejor forma
                         </span>
                     </div>
                 </div>
 
-
-                {/* figuras */}
-
                 <div className="figuras">
                     <div>
-                        <span> <NumberCounter end={80} start={50} delay='4' preFix="+"/> </span>
+                        <span>
+                            <NumberCounter end={80} start={50} delay='4' preFix="+"/> 
+                        </span>
                         <span>Alumnos</span>
                     </div>
                     <div>
@@ -55,26 +53,18 @@ const Hero = () => {
                     </div>
                 </div>
 
-                 {/* botones */}
                 <div className="hero-botones">
                     <button className="btn">Inscribite!</button>
                     <button className="btn">Sobre nosotros</button>
                 </div>
             </div>
 
-
             <div className="right-h">
                 <button className="btn">Comienza ahora</button>
-
-                
-
-                {/* imagenes */}
-
-                <img src={Pibe} alt="" className="hero-imagen" />
-                
+                <img src={Pibe} alt="Hero Image" className="hero-imagen" />
             </div>
         </div>
     )
-}
+})
 
 export default Hero
