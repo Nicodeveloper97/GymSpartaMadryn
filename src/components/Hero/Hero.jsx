@@ -1,9 +1,7 @@
 import React from "react"
 import "./Hero.css"
 import Header from "../../components/Header/Header"
-import Corazon from "../../assets/heart.png"
 import Pibe from "../../assets/pibe.png"
-import Calorias from "../../assets/calories.png"
 import {motion} from "framer-motion"
 import NumberCounter from "number-counter"
 
@@ -58,10 +56,10 @@ const Hero = () => {
                 </div>
 
                  {/* botones */}
-                 <div className="hero-botones">
+                <div className="hero-botones">
                     <button className="btn">Inscribite!</button>
                     <button className="btn">Sobre nosotros</button>
-                 </div>
+                </div>
             </div>
 
 
@@ -73,7 +71,6 @@ const Hero = () => {
                 {/* imagenes */}
 
                 <img src={Pibe} alt="" className="hero-imagen" />
-                
                 
             </div>
         </div>
