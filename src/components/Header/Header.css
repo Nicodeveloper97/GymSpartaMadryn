@@ -1,0 +1,74 @@
+.header-container {
+    position: relative;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 9rem;
+    height: 5rem;
+    object-fit: cover;
+  }
+  
+  .hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .hamburger-button:hover {
+    color: red;
+  }
+  
+  .header-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: white;
+  }
+  
+  .header-menu > li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .header-menu > li:hover {
+    color: red;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .hamburger-button {
+      display: block;
+      z-index: 100;
+    }
+  
+    .header-menu {
+      position: absolute;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.95);
+      top: 100%;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      gap: 1.5rem;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+  
+    .mobile-menu-open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }

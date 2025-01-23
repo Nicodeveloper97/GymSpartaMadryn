@@ -1,0 +1,146 @@
+.Join{
+    display: flex;
+    padding: 0 2rem;
+    gap: 10rem;
+}
+
+.leftt{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.leftt>hr{
+    position: absolute;
+    width: 10.5rem;
+    border: 2px solid var(red);
+    border-radius: 20%;
+    margin: -10px 0;
+}
+
+.leftt>div {
+    display: flex;
+    gap: 1rem;
+}
+
+.rightt{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.email-container{
+    display: flex;
+    gap: 3rem;
+    background-color: grey;
+    padding: 1rem 2rem;
+}
+
+.email-container>input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: lightgray;
+}
+
+::placeholder {
+    color: white;
+}
+
+.btnj{
+    background-color: #990000;
+    color: white;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .Join {
+        gap: 7rem;
+    }
+    
+    .leftt {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .Join {
+        gap: 5rem;
+    }
+
+    .leftt {
+        font-size: 2.2rem;
+    }
+
+    .email-container {
+        gap: 2rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Join {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .leftt {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .leftt > div {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .leftt > hr {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8rem;
+    }
+
+    .rightt {
+        width: 100%;
+    }
+
+    .email-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .email-container > input {
+        width: 100%;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .btnj {
+        width: 100%;
+        padding: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Join {
+        padding: 0 0.5rem;
+    }
+
+    .leftt {
+        font-size: 1.8rem;
+    }
+
+    .leftt > hr {
+        width: 7rem;
+    }
+
+    .email-container {
+        padding: 1rem;
+    }
+}
