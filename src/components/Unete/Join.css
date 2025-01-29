@@ -1,146 +1,166 @@
-.Join{
-    display: flex;
-    padding: 0 2rem;
-    gap: 10rem;
+.join {
+  display: flex;
+  padding: 4rem 2rem;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
-.leftt{
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
+.join-left {
+  flex: 1;
+  position: relative;
 }
 
-.leftt>hr{
-    position: absolute;
-    width: 10.5rem;
-    border: 2px solid var(red);
-    border-radius: 20%;
-    margin: -10px 0;
+.join-divider {
+  width: 10.5rem;
+  height: 3px;
+  background-color: #990000;
+  border: none;
+  border-radius: 2px;
+  margin: 2rem 0;
 }
 
-.leftt>div {
-    display: flex;
-    gap: 1rem;
+.text-group {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
-.rightt{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+.text-line {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.email-container{
-    display: flex;
+.transparent-text {
+  opacity: 0.5;
+}
+
+.join-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.email-container input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.email-container input:focus {
+  outline: none;
+  border-color: #990000;
+  box-shadow: 0 0 0 2px rgba(153, 0, 0, 0.2);
+}
+
+.email-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.join-button {
+  background-color: #990000;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #b30000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(153, 0, 0, 0.2);
+}
+
+.privacy-note {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.privacy-note a {
+  color: #990000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.privacy-note a:hover {
+  color: #b30000;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .join {
+    padding: 3rem 1.5rem;
     gap: 3rem;
-    background-color: grey;
-    padding: 1rem 2rem;
-}
-
-.email-container>input{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: lightgray;
-}
-
-::placeholder {
-    color: white;
-}
-
-.btnj{
-    background-color: #990000;
-    color: white;
-}
-
-/* Media Queries */
-@media screen and (max-width: 1200px) {
-    .Join {
-        gap: 7rem;
-    }
-    
-    .leftt {
-        font-size: 2.5rem;
-    }
-}
-
-@media screen and (max-width: 940px) {
-    .Join {
-        gap: 5rem;
-    }
-
-    .leftt {
-        font-size: 2.2rem;
-    }
-
-    .email-container {
-        gap: 2rem;
-        padding: 1rem 1.5rem;
-    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .Join {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 0 1rem;
-    }
+  .join {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    padding: 3rem 1rem;
+  }
 
-    .leftt {
-        font-size: 2rem;
-        text-align: center;
-    }
+  .join-left {
+    width: 100%;
+  }
 
-    .leftt > div {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-    }
+  .join-divider {
+    margin: 2rem auto;
+  }
 
-    .leftt > hr {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 8rem;
-    }
+  .text-line {
+    justify-content: center;
+  }
 
-    .rightt {
-        width: 100%;
-    }
-
-    .email-container {
-        width: 100%;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .email-container > input {
-        width: 100%;
-        padding: 0.5rem;
-        text-align: center;
-    }
-
-    .btnj {
-        width: 100%;
-        padding: 0.8rem;
-    }
+  .join-right {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .Join {
-        padding: 0 0.5rem;
-    }
+  .join {
+    padding: 2rem 0.75rem;
+  }
 
-    .leftt {
-        font-size: 1.8rem;
-    }
+  .text-group {
+    font-size: 1.75rem;
+  }
 
-    .leftt > hr {
-        width: 7rem;
-    }
+  .join-divider {
+    width: 8rem;
+  }
 
-    .email-container {
-        padding: 1rem;
-    }
+  .email-container {
+    padding: 1.5rem;
+  }
 }
+
