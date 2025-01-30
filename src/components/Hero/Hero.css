@@ -11,21 +11,13 @@
     background-color: var(--dark-background);
     color: var(--light-text);
     padding: 0 2rem;
-    min-height: 100vh;
+    
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
-.heroblur {
-    position: absolute;
-    width: 22rem;
-    height: 30rem;
-    left: 0;
-    background: rgba(153, 0, 0, 0.1);
-    filter: blur(100px);
-    z-index: 1;
-}
+
 
 .hero-grid {
     position: relative;
@@ -37,7 +29,6 @@
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    padding-top: 2rem;
 }
 
 .hero-content, .hero-visual {

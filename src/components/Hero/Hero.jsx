@@ -12,7 +12,6 @@ const Hero = React.memo(() => {
 
     return (
         <div className="hero-professional">
-            <div className="blur heroblur"></div>
             <Header/>
             <div className="hero-grid">
                 <div className="hero-content">
